@@ -61,7 +61,7 @@ var tcp_server = net.createServer(function(socket)
                                 '<!DOCTYPE html>'+
                                 '<html>'+
                                 ' <head>'+
-                                ' <meta charset="utf-8" />'+
+                                ' <meta charset="utf-8" http-equiv="refresh" content="1" />'+
                                 ' <title>Drone Tracker</title>'+
                                 ' </head>'+ 
                                 ' <body>'+
