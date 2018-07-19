@@ -1,0 +1,21 @@
+{
+  "name": "full-stack-assignment",
+  "version": "1.0.0",
+  "description": "a simple application to update drone movement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node Drone_Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stevenmuller16/droneassign.git"
+  },
+  "author": "Steven Muller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stevenmuller16/droneassign/issues"
+  },
+  "homepage": "https://github.com/Stevenmuller16/droneassign#readme"
+}
+
