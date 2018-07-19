@@ -6,7 +6,7 @@ var PORT = 8080;
 var UID_array = [1,2,3,4,5,6,7,8,9,10];
 var UID_counter = 0;//keeps track of the current ID to select for the next Interval, ensures every ID will get an update
 var Coord_array = ['50 50','61 -61', '48.02 48.02', '40.741895 -73.98', '41.432 -62.88', '52.324 43.23', '27 -62'  ];
-
+var speed = 0;
 var position_return_string;
 
 var client = new net.Socket();
@@ -37,8 +37,9 @@ function send_position_update()
 
     position_return_string = UID_array[UID_counter].toString + ',';
     UID_counter++;
-    position_return_string += Coord_array[Math.random() * (7 - 0) + 0].toString + ',';
-    position_return_string += (Math.random() * (1 - 0) + 0).toString;
+    position_return_string += Coord_array[Math.random() * (7 - 0) + 0].toString() + ',';
+    speed = Math.random() * (1 - 0) + 0;
+    position_return_string += speed.toString();
 
     client.write(position_return_string);
 
