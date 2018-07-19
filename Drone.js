@@ -1,16 +1,16 @@
 var net = require('net');
 
 var HOST = '127.0.0.1';
-var PORT = 8000;
+var PORT = 8080;
 
 var UID_array = [1,2,3,4,5,6,7,8,9,10];
-var UID_counter;//keeps track of the current ID to select for the next Interval, ensures every ID will get an update
+var UID_counter = 0;//keeps track of the current ID to select for the next Interval, ensures every ID will get an update
 var Coord_array = ['50 50','61 -61', '48.02 48.02', '40.741895 -73.98', '41.432 -62.88', '52.324 43.23', '27 -62'  ];
-var speed;
+
 var position_return_string;
 
 var client = new net.Socket();
-client.connect(PORT, HOST, function() {
+client.connect(PORT, "localhost", function() {
 
     console.log('CONNECTED TO: ' + HOST + ':' + PORT);// here for debugging to see if connection is successful
     
